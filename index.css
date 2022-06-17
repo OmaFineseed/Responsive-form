@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+body{
+   font-family: 'Poppins', sans-serif;
+   font-size: 16px;
+   background-image: url(./bg-intro-mobile.png);
+   background-color: hsl(0, 100%, 74% );
+    
+}
+
+.error-message, .error-icon{
+  display: none;
+}
+.form-box.error .error-message,
+.form-box.error .error-icon{
+    display: block;
+}
+.form-box.error  input {
+border: 2px solid hsl(0, 100%, 74% );
+}
+ 
+.introduction{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+.box-container{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+
+}
+.lsh-col{
+    flex: 1;
+    margin-bottom: 50px;
+}
+.lsh-col h1{
+    color: white;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 15px;
+}
+
+.first-paragraph {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+ }
+
+ .RHS-col .trial-box{
+     background-color: hsl(248, 32%, 49%);
+     color: white;
+     padding: 15px 50px;
+     border-radius: 15px;
+      box-shadow: 0 7px hsla(249, 10%, 26%, 0.464);
+      margin-bottom: 30px
+ }
+.trial-box p{
+    font-size: 1.3rem;
+   line-height: 2.2rem
+}
+.trial-box p span{
+    font-weight: 700;
+}
+
+.RHS-col{
+    flex: 1;
+}
+
+.form-box{
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 7px hsla(249, 10%, 26%, 0.464);
+}
+
+.group-input{
+    position: relative;
+    margin-bottom: 25px;
+}
+.RHS-col label{
+    display: none;
+}
+.RHS-col input, .RHS-col button[type = submit]{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1.3px solid hsl(246, 25%, 77%);
+    padding-left: 20px;*
+    outline: none;
+    color: hsl(249, 10%, 26%);
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.RHS-col input::placeholder{
+    color: hsla(249, 10%, 26%, 0.678);
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family:'poppins' ;
+}
+
+.RHS-col button[type = submit]{
+    border: none;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    box-shadow: 0px 4px hsl(154, 57%, 43%);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.RHS-col button[type = submit]:hover{
+    background-color: hsl(154, 60%, 63%);
+}
+   
+.RHS-col .form-footer{
+    margin-top: 10px;
+    color: hsl(246, 25%, 77%);
+}
+.RHS-col .form-footer span{
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+}
+
+
+.error-icon{
+   /* display: block;*/
+    position:absolute;
+    top: 28%;
+    right:20px;
+}
+.error-message{
+    /*display: block;*/
+    text-align: right;
+    font-size: .8rem;
+    font-style: italic;
+    color: hsl(0, 100%, 74%) ;
+    font-weight: 500;
+}
+@media only screen and (min-width:900px){
+    body{
+        background-image: url(./bg-intro-desktop.png);
+    }
+    .box-container{
+        flex-direction: row;
+    }
+    .lsh-col{
+        text-align: left;
+        padding-right: 5opx;
+    }
+    .lsh-col h1{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .lsh-col p{
+        font-size: 1.1rem;
+    }
+    .RHS-col{
+        max-width: 500px;
+        
+    }
+    .RHS-col .trial-box{
+        padding: 20px;
+    }
+    .RHS-col .trial-box p{
+        font-size: 1.1rem;
+    }
+    .RHS-col .trial-box{
+        padding: 20px;
+    }
+    .RHS-col .form-box{
+        padding: 40px;
+    }
+    .RHS-col input, .RHS-col input::placeholder {
+       font-size: 1.05rem;
+    }
+    .RHS-col .form-footer{
+        margin: 20px ;
+        font-size: .7rem;
+    }
+}
